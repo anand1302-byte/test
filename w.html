@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Car Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .table {
+            width: 100%;
+            margin-top: 2rem;
+            border-collapse: collapse;
+            overflow-x: auto;
+        }
+
+        .table .table-cars {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table .table-cars th, .table .table-cars td {
+            text-align: center;
+            padding: 0.5rem;
+            border: 1px solid #ececec;
+        }
+
+        .table .table-cars th {
+            background-color: #ec2027;
+            color: #fff;
+        }
+
+        .table .table-cars td {
+            background-color: #fff;
+            color: #1f1f2e;
+        }
+
+        .table .table-cars td img {
+            width: 100px;
+            height: auto;
+        }
+
+        .table .table-cars td button {
+            padding: 0.5rem;
+            font-size: 1rem;
+            background-color: #ec2027;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .table .table-cars td button:hover {
+            background-color: #b71c1c;
+        }
+
+        @media (max-width: 768px) {
+            .table .table-cars {
+                display: block;
+            }
+
+            .table .table-cars tr {
+                display: block;
+                margin-bottom: 1rem;
+                border: 1px solid #ececec;
+                padding: 1rem;
+            }
+
+            .table .table-cars th {
+                display: none;
+            }
+
+            .table .table-cars td {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0.5rem 0;
+            }
+
+            .table .table-cars td img {
+                margin-right: 1rem;
+            }
+
+            .table .table-cars td span {
+                font-size: 0.9rem;
+            }
+
+            .table .table-cars td button {
+                width: 100%;
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="table">
+    <div class="cars">
+        <table class="table-cars">
+            <thead>
+                <tr>
+                    <th>Vehicle Model</th>
+                    <th>Extra Rate/Km</th>
+                    <th>Included Km</th>
+                    <th>Estimate (INR)</th>
+                    <th>Advance</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="fleet-i10.webp" alt="Vehicle"></td>
+                    <td>Maruti Suzuki Swift Dzire</td>
+                    <td>10 km</td>
+                    <td>250 km</td>
+                    <td>1000</td>
+                    <td>0</td>
+                    <td><button>Book Now</button></td>
+                </tr>
+                <tr>
+                    <td><img src="fleet-ToyotaEtios.webp" alt="Vehicle"></td>
+                    <td>Toyota Etios</td>
+                    <td>12 km</td>
+                    <td>300 km</td>
+                    <td>1200</td>
+                    <td>200</td>
+                    <td><button>Book Now</button></td>
+                </tr>
+                <tr>
+                    <td><img src="fleet-ToyotaInnova.webp" alt="Vehicle"></td>
+                    <td>Toyota Innova</td>
+                    <td>15 km</td>
+                    <td>400 km</td>
+                    <td>1500</td>
+                    <td>500</td>
+                    <td><button>Book Now</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+</body>
+</html>
